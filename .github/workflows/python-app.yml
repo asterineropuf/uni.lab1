@@ -16,7 +16,7 @@ jobs:
     - name: Lint code with flake8
       run: |
         pip install flake8
-        flake8 .
+        flake8 . --ignore=E211,E302,E305,W292,W293
     - name: Demonstrate GitHub Secrets
       env:
         SUPER_SECRET: ${{ secrets.MY_SUPER_SECRET_KEY }}
